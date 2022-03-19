@@ -1,0 +1,10 @@
+#在游戏中按 F3=H 可以看真实的物品名
+#对应材质的ITEM中NBT包含帅逼就会显示ICE模型
+#匹配名<->模型路径(省略路径assets/germmod/models/item)
+DIAMOND_SWORD:
+  - "测试武器<->red_sword"
+DIAMOND_CHESTPLATE:
+  - "测试胸甲<->armor_chest"
+#省略路径 assets/germmod/skin
+GERMMC_SKIN:
+  - '黄鸦<->duck_chest'

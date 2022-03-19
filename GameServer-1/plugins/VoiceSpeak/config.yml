@@ -1,0 +1,6 @@
+Version: 100
+VoiceRecord:
+  SampleRate: 8000.0
+  SampleSizeInBits: 8
+  Channels: 1
+  MaxRecordMS: 8000

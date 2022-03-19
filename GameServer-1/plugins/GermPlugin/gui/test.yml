@@ -1,0 +1,5 @@
+test:
+  type: 0
+  path: 'local<->image/test.png'
+  width: "w*1"
+  height: "h*1"

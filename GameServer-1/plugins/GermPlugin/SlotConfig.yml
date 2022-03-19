@@ -1,0 +1,12 @@
+defaultSlotSets:
+  germplugin_default:
+    putCondition: '护腕' #填*是都可以
+    defaultItemStack:
+      ==: org.bukkit.inventory.ItemStack
+      type: CLAY_BALL
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: "§f护腕"
+        lore:
+          - '§7系统物品'

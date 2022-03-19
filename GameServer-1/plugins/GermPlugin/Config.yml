@@ -1,0 +1,23 @@
+#Driver mysql
+#Link: 'jdbc:mysql://localhost:3306/数据库名?user=root&password=密码'
+DatabaseOptions:
+  Driver: 'sqlite'
+  Link: 'jdbc:sqlite:plugins/GermPlugin/sqlite.db'
+Settings:
+  #debug模式是否开启
+  deBug: false
+  #是否强制使用萌芽引擎才可以进入游戏
+  forceGermEngine: false
+  #槽位点击的冷却 防止恶意快速点击 单位毫秒
+  clickCooldown: 167
+  #进服发送数据延迟 推荐 27 - 40之间
+  sendDelay: 27
+#加入服务器时赋予玩家这些HUD
+PermanentHud:
+  - "logo"
+#案件绑定 玩家触发会输入里面的指令
+SimpleKeyBinding: #全部可删除
+  KeyDown_22:
+    - "opcmd<->say %player_name% 22 Down!"
+  KeyUp_22:
+    - "opcmd<->say %player_name% 22 Up!"

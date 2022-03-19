@@ -1,0 +1,12 @@
+xiaohaungren:
+  # 内置血条是否开启
+  blood_bar: true
+  # 此名字的怪物将会显示此模型
+  custom_name_tag: "小黄人"
+  # 这里的模型文件为基岩版的模型文件，放在材质包内或填写地址(地址从 assets/germmod/models/entity 开始，直接写以后的地址即可)
+  default_model_path: "xiaohuangren.json"
+  # 模型文件渲染原图地址 (地址从 assets/germmod/textures/entity 开始，直接写以后的地址即可)
+  default_texture_path: "xiaohuangren.png"
+  # 模型碰撞箱
+  entity_width: 1.8
+  entity_height: 1.8

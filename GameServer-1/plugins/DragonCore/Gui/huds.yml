@@ -1,0 +1,265 @@
+match: "hud"
+through: false
+priority: 1
+interactHud: false
+currentItemSize: 16
+allowEscClose: true
+hideHud:
+- "HEALTH"
+- "FOOD"
+- "ARMOR"
+- "EXPERIENCE"
+- "HOTBAR"
+import: []
+Functions:
+  open: |-
+    方法.异步执行方法('每秒更新变量');
+    方法.异步执行方法('屏幕自适应');
+  屏幕自适应: |-
+    界面变量.x比=方法.取屏幕宽度()/960;
+    界面变量.y比=方法.取屏幕高度()/508.5;
+    界面变量.xy比 = 界面变量.x比/界面变量.y比;
+    方法.延时(500);
+    方法.异步执行方法('屏幕自适应');
+  每秒更新变量: |-
+    方法.更新变量值('vault_eco_balance');
+    方法.更新变量值('player_health','player_max_health','player_food_level');
+    方法.更新变量值("ap_life","ap_lifes","player_food_level","sl_exp","sx_health","sx_maxHealth","sl_maxExp","sl_level");
+    方法.更新变量值('playerpoints_points');
+    方法.更新变量值('ap_damage_min','ap_damage_max','ap_defense_max','ap_defense_min','ap_critchance','ap_critrate','ap_dodge'
+    ,'ap_reflection','ap_hit','ap_expaddition','ap_vampirechance','ap_sunderarmor','ap_shootspeed','ap_moving');
+    方法.延时(300);
+    方法.异步执行方法('每秒更新变量');
+球球_texture:
+  x: "w*0.4852"
+  y: "h*0.88"
+  width: "w*0.014*2"
+  height: "h*0.024*2"
+  texture: "靓仔寒UI/Resource/球球.png"
+图片1_texture:
+  type: "图片"
+  x: "w*0.3666" 
+  y: "h*0.88"
+  width: "w*0.135*2"
+  height: "h*0.057*2"
+  texture: "靓仔寒UI/Resource/hud.png"
+图片5_texture:
+  type: "图片"
+  x: "w*0.3706"
+  y: "h*0.952"
+  width: "w*0.012*1.8"
+  height: "h*0.021*1.8"
+  texture: "(方法.玩家手持槽==0) ? '靓仔寒UI/Resource/槽位1.png':'靓仔寒UI/Resource/槽位.png'"
+图片6_texture:
+  type: "图片"
+  x: "w*0.3926"
+  y: "h*0.952"
+  width: "w*0.012*1.8"
+  height: "h*0.021*1.8"
+  texture: "(方法.玩家手持槽==1) ? '靓仔寒UI/Resource/槽位1.png':'靓仔寒UI/Resource/槽位.png'"
+图片7_texture:
+  type: "图片"
+  x: "w*0.4136"
+  y: "h*0.951"
+  width: "w*0.012*1.8"
+  height: "h*0.021*1.8"
+  texture: "(方法.玩家手持槽==2) ? '靓仔寒UI/Resource/槽位1.png':'靓仔寒UI/Resource/槽位.png'"
+图片8_texture:
+  type: "图片"
+  x: "w*0.4346"
+  y: "h*0.951"
+  width: "w*0.012*1.8"
+  height: "h*0.021*1.8"
+  texture: "(方法.玩家手持槽==3) ? '靓仔寒UI/Resource/槽位1.png':'靓仔寒UI/Resource/槽位.png'"
+图片9_texture:
+  type: "图片"
+  x: "w*0.4556"
+  y: "h*0.952"
+  width: "w*0.012*1.8"
+  height: "h*0.021*1.8"
+  texture: "(方法.玩家手持槽==4) ? '靓仔寒UI/Resource/槽位1.png':'靓仔寒UI/Resource/槽位.png'"
+图片10_texture:
+  type: "图片"
+  x: "w*0.4776"
+  y: "h*0.951"
+  width: "w*0.012*1.8"
+  height: "h*0.021*1.8"
+  texture: "(方法.玩家手持槽==5) ? '靓仔寒UI/Resource/槽位1.png':'靓仔寒UI/Resource/槽位.png'"
+图片11_texture:
+  type: "图片"
+  x: "w*0.4986"
+  y: "h*0.951"
+  width: "w*0.012*1.8"
+  height: "h*0.021*1.8"
+  texture: "(方法.玩家手持槽==6) ? '靓仔寒UI/Resource/槽位1.png':'靓仔寒UI/Resource/槽位.png'"
+图片12_texture:
+  type: "图片"
+  x: "w*0.5196"
+  y: "h*0.951"
+  width: "w*0.012*1.8"
+  height: "h*0.021*1.8"
+  texture: "(方法.玩家手持槽==7) ? '靓仔寒UI/Resource/槽位1.png':'靓仔寒UI/Resource/槽位.png'"
+图片13_texture:
+  type: "图片"
+  x: "w*0.5416"
+  y: "h*0.951"
+  width: "w*0.012*1.8"
+  height: "h*0.021*1.8"
+  texture: "(方法.玩家手持槽==8) ? '靓仔寒UI/Resource/槽位1.png':'靓仔寒UI/Resource/槽位.png'"
+图片14_texture:
+  type: "图片"
+  x: "w*0.5686"
+  y: "h*0.951"
+  width: "w*0.012*1.8"
+  height: "h*0.021*1.8"
+  texture: "靓仔寒UI/Resource/槽位z.png'"
+图片15_texture:
+  type: "图片"
+  x: "w*0.5896"
+  y: "h*0.951"
+  width: "w*0.012*1.8"
+  height: "h*0.021*1.8"
+  texture: "靓仔寒UI/Resource/槽位x.png'"
+图片16_texture:
+  type: "图片"
+  x: "w*0.6106"
+  y: "h*0.951"
+  width: "w*0.012*1.8"
+  height: "h*0.021*1.8"
+  texture: "靓仔寒UI/Resource/槽位c.png'"
+图片2_texture:
+  type: "图片"
+  x: "w*0.3736"
+  y: "h*0.9077"
+  width: "界面变量.x比*方法.玩家血量*2.65"
+  height: "h*0.008*2"
+  texture: "靓仔寒UI/Resource/血条.png"
+图片3_texture:
+  type: "图片"
+  x: "w*0.5156"
+  y: "h*0.9077"
+  width: "w*0.055"
+  height: "h*0.008*2"
+  texture: "靓仔寒UI/Resource/蓝条.png"
+图片4_texture:
+  type: "图片"
+  x: "w*0.3741"
+  y: "h*0.931"
+  width: "界面变量.x比*方法.取变量('sl_exp')/方法.取变量('sl_maxExp')*241"
+  height: "h*0.001*5"
+  texture: "靓仔寒UI/Resource/经验.png"
+文本2_label:
+  type: "文本"
+  x: "w*0.498"
+  y: "h*0.895"
+  width: "w*0.059"
+  height: "h*0.026"
+  texts:
+  - "方法.取变量('sl_level')"
+  color: "50,230,100,255"
+  center: true
+文本20_label:
+  type: "文本"
+  x: "w*0.43"
+  y: "h*0.9077"
+  texts:
+  - "方法.合并文本(方法.取变量('ap_life'),'/',方法.取变量('ap_lifes'))"
+  shadow: "true"
+  center: true
+槽位1_slot:
+  type: "槽位"
+  x: "w*0.3746"
+  y: "h*0.954"
+  width: "w*0.016"
+  height: "h*0.028"
+  extends: ""
+  identifier: "container_36"
+槽位2_slot:
+  type: "槽位"
+  x: "w*0.3956"
+  y: "h*0.954"
+  width: "w*0.016"
+  height: "h*0.028"
+  extends: ""
+  identifier: "container_37"
+槽位3_slot:
+  type: "槽位"
+  x: "w*0.4166"
+  y: "h*0.954"
+  width: "w*0.016"
+  height: "h*0.028"
+  extends: ""
+  identifier: "container_38"
+槽位4_slot:
+  type: "槽位"
+  x: "w*0.437"
+  y: "h*0.954"
+  width: "w*0.016"
+  height: "h*0.028"
+  extends: ""
+  identifier: "container_39"
+槽位5_slot:
+  type: "槽位"
+  x: "w*0.4585"
+  y: "h*0.953"
+  width: "w*0.016"
+  height: "h*0.028"
+  extends: ""
+  identifier: "container_40"
+槽位6_slot:
+  type: "槽位"
+  x: "w*0.4806"
+  y: "h*0.953"
+  width: "w*0.016"
+  height: "h*0.028"
+  extends: ""
+  identifier: "container_41"
+槽位7_slot:
+  type: "槽位"
+  x: "w*0.501"
+  y: "h*0.953"
+  width: "w*0.016"
+  height: "h*0.028"
+  extends: ""
+  identifier: "container_42"
+槽位8_slot:
+  type: "槽位"
+  x: "w*0.522"
+  y: "h*0.953"
+  width: "w*0.016"
+  height: "h*0.028"
+  extends: ""
+  identifier: "container_43"
+槽位9_slot:
+  type: "槽位"
+  x: "w*0.5446"
+  y: "h*0.953"
+  width: "w*0.016"
+  height: "h*0.028"
+  extends: ""
+  identifier: "container_44"
+槽位10_slot:
+  type: "槽位"
+  x: "w*0.5726"
+  y: "h*0.954"
+  width: "w*0.015"
+  height: "h*0.027"
+  extends: ""
+  identifier: "药水槽1"
+槽位11_slot:
+  type: "槽位"
+  x: "w*0.5936"
+  y: "h*0.954"
+  width: "w*0.015"
+  height: "h*0.027"
+  extends: ""
+  identifier: "药水槽2"
+槽位12_slot:
+  type: "槽位"
+  x: "w*0.6146"
+  y: "h*0.955"
+  width: "w*0.015"
+  height: "h*0.027"
+  extends: ""
+  identifier: "药水槽3"
+...

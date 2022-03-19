@@ -1,0 +1,58 @@
+#索引名
+default_move:
+  #0为移动动画 1位旋转动画 2为透明度动画 3为缩放动画
+  type: 0
+  #触发这个动画后 延迟多少后开始执行 单位毫秒
+  delay: 100
+  #这个动画会循环多少次播放
+  cycle: -1
+  #如果动画播放完成后 是否停留在最终状态(比如透明度动画的最终状态是透明
+  #那么这个选项的意思就是，最后会停留到透明状态)
+  permanent: true
+  #这个动画会在多少毫秒内完成一次
+  duration: 1000
+  #注意：这里要加引号
+  #在GUI中使用的时候可以根据 w h 计算
+  #移动的X、Y、Z值
+  moveX: "w*0.1"
+  moveY: "100"
+  moveZ: "100"
+default_rotate:
+  type: 1
+  delay: 100
+  cycle: -1
+  permanent: true
+  duration: 1000
+  #沿着X、Y、Z轴旋转多少（至于x y z轴的方向什么的，后面再讲吧，其实您试一下马上就明白了）
+  rotateX: 100
+  rotateY: 100
+  rotateZ: 100
+  total: 1000
+default_fade:
+  type: 2
+  delay: 100
+  cycle: -1
+  permanent: true
+  duration: 1000
+  # 1 为不透明 0为透明 from和to 都在[0,1]之间
+  from: 1
+  to: 0.2
+default_scale:
+  type: 3
+  delay: 100
+  cycle: -1
+  permanent: true
+  duration: 1000
+  # 这个是根据原始大小与下列的数相乘得来的缩、扩放 from和to都需>= 0
+  from: 1
+  to: 0.2
+logo_rotate:
+  type: 1
+  delay: 6666
+  cycle: -1
+  permanent: true
+  duration: 1000
+  rotateX: 0
+  rotateY: 0
+  rotateZ: 360
+  total: 0

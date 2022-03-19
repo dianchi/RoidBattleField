@@ -1,0 +1,62 @@
+---- Mohist 崩溃报告 ----
+
+WARNING: coremods are present:
+  weaponlib ([维克的现代战争]1.12.2-2.0-0.4.6.2.jar)
+Contact their authors BEFORE contacting forge
+
+
+
+崩溃时间: 22-3-18 下午7:50
+描述: 服务器在进行tick循环时发生异常 (Exception in server tick loop)
+
+缺失模组:
+	unknown : need any: have missing
+
+net.minecraftforge.fml.common.MissingModsException: 模组 playerrevive (Player Revive) 需要前置 [creativecore]
+	at net.minecraftforge.fml.common.Loader.sortModList(Loader.java:277)
+	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:587)
+	at net.minecraftforge.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:101)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:329)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:168)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:596)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+错误的详细信息，其代码路径和所有已知的细节如下所示:
+---------------------------------------------------------------------------------------
+
+-- 系统详情 --
+Details:
+	Mohist版本: 1.12.2-245
+	操作系统: Windows 10 (amd64) 版本 10.0
+	JAVA版本: 1.8.0_291, Oracle Corporation
+	JAVA虚拟机版本: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	内存: 263019808 bytes (250 MB) / 867696640 bytes (827 MB) up to 3797417984 bytes (3621 MB)
+	JAVA虚拟机参数: 0 total; 
+	内部缓存: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	CraftBukkit信息: 
+   Running: 
+   Failed to handle CraftCrashReport: craftbukkit not runs
+
+	FML: MCP 9.42 Powered by Forge 14.23.5.2855 10 mods loaded, 10 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State | ID              | Version      | Source                            | Signature |
+	|:----- |:--------------- |:------------ |:--------------------------------- |:--------- |
+	| L     | minecraft       | 1.12.2       | minecraft.jar                     | None      |
+	| L     | mcp             | 9.42         | minecraft.jar                     | None      |
+	| L     | mohist          | 1.12.2-245   | mohist.jar                        | None      |
+	| L     | FML             | 8.0.99.99    | mohist.jar                        | None      |
+	| L     | forge           | 14.23.5.2855 | mohist.jar                        | None      |
+	| L     | mw              | 0.4.6.2      | [维克的现代战争]1.12.2-2.0-0.4.6.2.jar   | None      |
+	| L     | firstaid        | 1.6.20       | firstaid-1.6.20.jar               | None      |
+	| L     | iblis_headshots | 1.2.6        | iblis-headshots-1.2.6.jar         | None      |
+	| L     | playerrevive    | 1.0          | PlayerRevive_v1.2.40_mc1.12.2.jar | None      |
+	| L     | gvc             | 1.2.5        | Voice+Chat+Reloaded-1.2.5.jar     | None      |
+
+	Loaded coremods (and transformers): 
+weaponlib ([维克的现代战争]1.12.2-2.0-0.4.6.2.jar)
+  com.vicmatskiv.weaponlib.core.WeaponlibClassTransformer
+	Profiler Position: N/A (disabled)
+	Is Modded: Definitely; Server brand changed to 'Mohist'
+	Type: Dedicated Server (map_server.txt)

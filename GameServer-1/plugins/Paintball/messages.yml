@@ -1,0 +1,282 @@
+sign-title: '&8[%theme%Paintball&8]'
+command-title: '&lPaintball'
+prefix: '&8[&3Paintball&8] '
+arena-list-command: '&9Arenas: %arena%'
+command-arena-info: Display all Paintball Arena setup commands
+command-create-info: Create a new Arena
+command-setflag-info: Set Arena flag point
+command-delflag-info: Delete Arena flag point
+command-setlocation-info: Set Arena location
+command-dellocation-info: Delete Arena location
+command-setspectate-info: Set Arena spectate location
+command-delspectate-info: Delete Arena spectate location
+command-remove-info: Remove an arena
+command-rename-info: Rename an Arena
+command-setmax-info: Set max number of players
+command-setmin-info: Set min amount of players
+command-setteams-info: Set teams via ChatColors seperated by commas ex. &1,&b,&c
+command-steps-info: List steps of an Arena
+command-wager-info: Wager money for an Arena.
+command-addcoin-info: Give coins to a player.
+removed-all-files: Removed all files from folder.
+double-coins: Double coins activated for the rest of the game.
+command-convert-info: Convert an Arena to a different type
+command-disable-info: Disable an Arena
+command-enable-info: Enable an Arena
+command-info-info: Display Arena information
+command-reload-info: Reloads all yml files
+command-reset-info: Reset a player's stats
+command-start-info: Force start an Arena
+command-stop-info: Force stop an Arena
+command-admin-info: Display all Paintball Admin commands
+command-setholo-info: Creates a leaderboard hologram
+command-holo-info: Remove holograms around you
+command-kick-info: Kick a player from Paintball
+command-join-info: Join an Arena
+command-leave-info: Leave an Arena
+command-list-info: List of all Arenas
+command-spectate-info: Spectate an Arena
+command-stats-info: View player's game statistics
+command-top-info: View leaderboards.
+download-holo: Please download plugin HolographicDisplays to use this feature.
+holo-link: http://dev.bukkit.org/bukkit-plugins/holographic-displays/
+holo-set: Hologram leaderboard set to your location!
+in-arena-to-wager: You must be in an arena to wager!
+amount-greater-than-0: Amount must be greater than zero!
+wager-in-arena: You must be in an arena to wager!
+enable-vault: Vault must be enabled for this feature.
+vault-not-enough-money: You do not have enough money!
+flying-enabled: Flying has been enabled
+flying-disabled: Flying has been disabled
+invalid-last-location: You do not have a last location.
+teleporting-to-last-location: Teleporting to last location...
+cannot-use-while-riding: You cannot use an item while riding something.
+valid-number: Please enter a valid number
+holograms-removed: Removed &7%amount% &aholograms.
+no-holograms-removed: No holograms were removed.
+no-arenas: No arenas are currently opened.
+target-not-in-arena: Target is not in an arena!
+not-in-arena: You are not in an arena.
+cannot-join: 'Error: arena is not available to join!'
+cannot-spectate: 'Error: arena is not available to spectate!'
+left-arena: Successfully left arena.
+arena-not-setup: '%arena% has not been fully setup.'
+arena-disabled: '%arena% is disabled.'
+arena-not-in-progress: '%arena% is currently not in progress'
+not-found: Target '%player%' was not found.
+in-arena: You are already in an arena!
+arena-not-found: No arena named %arena% found.
+page-real-number: Please specify a real number as the page.
+page-bigger: The page cannot be lower than 0
+page-find-error: Page %amount%/%max% cannot be found.
+arena-create: '%arena% successfully created!/n%steps%'
+arena-name-exists: An arena named %arena% already exists!
+arena-remove: Arena has been removed.
+arena-force-stopped: '%arena% has been force stopped!'
+arena-convert-same-type: '%arena% is already a %arena-type% arena.'
+arena-convert-success: '%arena% has been converted to %arena-type%'
+invalid-arena: '%arena% is an invalid arena.'
+invalid-team: '%team% is an invalid team. Choose either <%teams%>'
+invalid-stat: '%stat% is an invalid statistic. Choose either %stats%'
+invalid-command: Unknown Command! Type /paintball for a list of commands.
+internal-error: 'An internal error has occurred: %error%'
+no-permission: You don't have access to that command!
+no-sign-permission: You don't have access to click that!
+no-console-permission: Console does not have access to that command!
+not-enough-arguments: Not enough arguments!
+too-many-arguments: Too many arguments!
+no-teams-set: '%arena% does not have any teams set!'
+invalid-arena-type: Invalid arena type. Choose either <%arena-types%>
+choose-enable-or-disable: '%command% is an invalid choice. Use either enable/disable'
+disable-success: '%arena% has been disabled!'
+enable-success: '%arena% has been enabled!'
+arena-enabled: '%arena% is already enabled.'
+arena-is-finished: Game is already finished.
+arena-default-action: shot
+arena-start-countdown-header: '&aStarting'
+arena-start-countdown-footer: '&7%time%&a seconds!'
+arena-lobby-countdown-header: '&aWaiting'
+arena-lobby-countdown-footer: '&7%time%&a seconds!'
+arena-move-error: You are not allowed to move items in your inventory!
+core-destroyed: Your Core has been destroyed!
+arena-shop-name: '&6Coin Shop'
+arena-no-duel-wield: You are not allowed to dual wield!
+teleporting: '&aTeleporting into arena...'
+arena-flag-drop: '&lThe %secondary%%team%%theme% team has dropped the flag!'
+arena-flag-score: '&lThe %secondary%%team%%theme% team has scored a flag!'
+arena-flag-steal: '&lPlayer %secondary%%sender%%theme% &lhas stolen %secondary%%team%%theme%&l''s
+  flag!'
+arena-join-message: '%team-color%%sender%&a has joined the arena! &7%amount%/%max%'
+arena-you-joined: '&aYou have joined the arena!'
+arena-joined: '&aJoined arena'
+arena-size: '&7%amount%/%max%'
+arena-team-change: '&aYou are now on the %team-color%%team% Team!'
+arena-cannot-break-blocks: You are not allowed to break blocks while in the arena!
+arena-command-disabled: That command is disabled while in the arena.
+arena-die-header: '&4&lYou died!'
+arena-die-footer: '&7Respawning...'
+cannot-attack-own-core: You cannot attack your own Core!
+kick-player: '%player% has been kicked from %arena%'
+player-not-in-arena: '%player% is not in an arena.'
+balancing-teams: '%theme%Balancing Teams'
+error-parsing: Error parsing command
+space-filled: Sorry, your space has been filled by another player.
+places-not-found: Sorry, no places could not be found in this arena.
+skull-created: Leaderboard skull successfully created!
+valid-4-number: Line 4 must be a valid number.
+choose-rank-number: 'Choose a rank number, for example: 3'
+now-spectating: Now spectating &7%player%&a!
+you-are-now-spectating: '&aYou are now spectating!'
+config-reloaded: Successfully reloaded configuration files.
+paintkillers-on: Paintkillers have taken effect!
+not-find-target: Could not find target.
+arena-is-fill: '%arena% is full!'
+scoreboard-title: '%theme%&l  Paintball &f%secondary%%time%  '
+scoreboard-coins: Coins %secondary%» %amount%
+scoreboard-kills: Kills %secondary%» %amount%
+scoreboard-kill-streak: Kill Streak %secondary%» %amount%
+scoreboard-kd: K/D %secondary%» %amount%
+scoreboard-money: Money %secondary%» %amount%
+scoreboard-line: '&7&m                    '
+scoreboard-status: Status %secondary%» %amount%
+scoreboard-lives: Lives %secondary%» %amount%
+scoreboard-mode: Mode %secondary%» %amount%
+scoreboard-health: Health %secondary%» %amount%
+scoreboard-players: Count %secondary%» %amount%
+scoreboard-team: Team %secondary%» %amount%
+scoreboard-wager: Wager %secondary%» %amount%
+item-leave-arena: '&c&lClick%secondary% » &4Leave Arena'
+sign-wrong-syntax: Wrong syntax for creating Paintball sign.
+sign-autojoin-created: Auto Join sign successfully created!
+sign-join-created: Join sign successfully created!
+sign-leave-created: Leave sign successfully created!
+sign-spectate-created: Spectate sign successfully created!
+sign-leaderboard-removed: Leaderboard sign has been successfully removed!
+sign-leave-removed: Leave sign has been successfully removed!
+sign-autojoin-removed: Auto join sign has been successfully removed!
+sign-join-removed: '%arena%''s join sign has been successfully removed!'
+skull-leaderboard-removed: Leaderboard skull has been successfully removed!
+sign-spectate-removed: '%arena%''s spectate sign has been successfully removed!'
+sign-leave: '&cLeave'
+sign-spectate: '&aSpectate'
+cannot-join-server-type: Joining is disabled for %server-type% Paintball server.
+arena-menu-vote-name: '%theme%Arena Vote'
+arena-menu-join-name: '%theme%Arena Join'
+back-to-hub: §cHub
+arena-start-message: Game started
+arena-teams-not-balanced: You cannot change to this team until the teams are balanced.
+kill-confirmed: '&e&lKill Confirmed!'
+kill-denied: '&c&lKill Denied!'
+ctf-short-name: CTF
+ctf-long-name: Capture the Flag
+ctf-description: Capture other team's flags and bring them to your base
+tdm-short-name: TDM
+tdm-long-name: Team Deathmatch
+tdm-description: Kill players on the other team
+ffa-short-name: FFA
+ffa-long-name: Free For All
+ffa-description: Everyone is on their own team
+dom-short-name: DOM
+dom-long-name: Domination
+dom-description: Secure other team's beacon points
+lts-short-name: LTS
+lts-long-name: Last Team Standing
+lts-description: Limited lives, last team standing wins
+rtf-short-name: RTF
+rtf-long-name: Rush the Flag
+rtf-description: Capture the neutral flag and bring it to your base
+dtc-short-name: DTC
+dtc-long-name: Destroy the Core
+dtc-description: Get to the other team's Core and shoot it to destroy it
+kc-short-name: KC
+kc-long-name: Kill Confirmed
+kc-description: After you kill a player, confirm the kill before the other team does
+higest-kill-streak: Highest Killstreak
+team-won: The %team% team won!
+there-was-a-tie-between: 'There was a tie between '
+won: won
+lost: lost
+you: You
+kd: K/D
+kills: Kills
+deaths: Deaths
+accuracy: Accuracy
+shots: Shots
+hits: Hits
+games-played: Games Played
+wins: Wins
+defeats: Defeats
+ties: Ties
+flags-captured: Flags Captured
+flags-dropped: Flags Dropped
+time-played: Time Played
+game-forfeited: Game forfeited. There are not enough players to continue.
+no-space: You do not have enough hot bar space for this item.
+arena-join-permission: You do not have permission to join that arena!
+top-leaderboard-title: '%secondary%&m          %theme% Paintball Top %secondary%%page%%theme%
+  Leaderboard %secondary%&m          '
+per-leaderboard-title: '%secondary%&m          %theme% Paintball %stat% Leaderboard
+  &7%page%%theme%/&7%max% %secondary%&m          '
+top-leaderboard-layout: '%theme%#%rank% %secondary%%stat% » %theme%%sender% %secondary%-
+  %amount%'
+per-leaderboard-layout: '%theme%#%rank%%secondary% » %theme%%sender% %secondary%-
+  %amount%'
+being-secured: '%theme%%sender%%secondary% is being secured by %theme%%team%'
+has-secured: '%theme%%sender%%secondary% has secured %theme%%team%'
+you-are-protected: 'You are still protected. Protection: %time% seconds'
+they-are-protected: 'That player is protected. Protection: %time% seconds'
+hit-player: Hit player! %amount%/%max%
+team-full: '&rTeam %team% is full!'
+must-be-arena-player: Target must be an arena player!
+not-setup: Not Setup
+waiting: Waiting
+disabled: Disabled
+starting: Starting
+stopping: Stopping
+playing: Playing
+removed: Removed
+expiration-time: '%theme%&lExpiration » %secondary%%time%%theme% seconds'
+expiration-end: '%theme%&lExpiration » %secondary%Item %item%%theme% has expired'
+protection-end: '%theme%&lProtection » %secondary%Protection has expired'
+protection-time: '%theme%&lProtection » %secondary%%time% §3seconds'
+team-switch-time: '%theme%&lTeam Switch » %secondary%%time%§3 seconds'
+team-switch-end: '%theme%&lTeam Switch » %secondary%Team switching unlocked'
+team-switch-error: '%theme%&lTeam Switch » %secondary%Wait for the team switch cooldown
+  to end.'
+team-switch-title: Team Switcher
+gave-coins: You have given &7%amount% &acoins to &7%player%
+wager-gain-amount: '%theme%Total money gained from wager: %secondary%%currency%%amount%'
+missing-team-flag: §4§lError§7 » §cYou are missing your team's flag!
+game-stats: '%theme% Games Stats '
+money1: 'Money: '
+kills1: 'Kills: '
+deaths1: 'Deaths: '
+killstreak1: 'Killstreak: '
+kd1: 'KD: '
+your-team1: 'Your team '
+tied1: tied
+click: Click
+join: Join
+teleporter: Teleporter
+teleport-to: 'Teleport to '
+change-team: Change Team
+coin-item-error-1: You don't have permission to use this item!
+coin-item-error-2: You don't have enough coins!
+coin-item-error-3: You don't have enough money!
+lore-description: '%theme%Description: '
+lore-lasts: '%theme%Lasts: '
+lore-cost: '%theme%Cost: '
+lore-coins: '%theme%Coins: '
+lore-minutes: minutes
+lore-seconds: seconds
+voted-for-arena: You have voted for §7%arena%
+storage-not-empty: You must clear your storage contents before joining.
+armour-not-empty: You must clear your armour content before joining.
+extra-not-empty: You must clear your inventory content before joining.
+max-uses-per-game: §cItem has reached its max amount of uses per game.
+max-uses-per-player: §cItem has reached its max amount of uses per player.
+reset-flag: §l%player% has reset %team%'s flag!
+shot-player-format: '%team-color%%player%%secondary% %action% %died-team-color%%died%'
+arena-state-check: '%arena% is %state%.'
+stat-title: '%secondary%§m             §r %theme%%player%''s Stats §r %secondary%§m             '
+player-wagered: '%player% has wagered %currency%%wager-amount% (%currency%%wager-total%)'

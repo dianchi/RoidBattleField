@@ -1,0 +1,20 @@
+[
+  {
+    "uuid": "3a40c619-76c2-4340-8164-95a9ee481d7f",
+    "name": "BatryCC",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "ffffffff-ffff-ffff-ffff-fffffffffff0",
+    "name": "CMI-Fake-Operator",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "0f2c9c51-7ce6-3da8-9480-cc62a5bf1cc5",
+    "name": "BatryCC",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  }
+]

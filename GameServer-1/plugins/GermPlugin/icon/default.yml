@@ -1,0 +1,20 @@
+default1:
+  #物品的ID或者材质全名 注意"" 注意UTF-8
+  type: "336"
+  #纹理地址 如果填gif就会变成gif物品  你可以填个 gif/ghast.gif 测试下（这个纹理是内置的 直接填上就可以用）
+  textures: "textures/gui/slot.png"
+  #匹配的字符 支持 名字、lore、nbt
+  match: "GermMC"
+  #偏移值 设置了可以让图标移动位置  怎么弄 您试下马上就知道是怎么回事了
+  offsetX: -9.0
+  offsetY: -7.0
+  #缩放设置 不能小于 1
+  scale: 2.0
+  # Icon的Flag,用逗号隔开
+  # 可用值:
+  #    HIDDEN_TOOLTIP: 隐藏ToolTip,即Lore与标题
+  #    HIDDEN_HOVER_BOX: 隐藏物品在背包选中时的白色半透明背景
+  #    FIXED: 只有编辑模式下才可以移动,服务器有点击事件
+  #    NOCLICK: 只有编辑模式下才可以移动,服务器无点击事件,客户端禁止交互
+  #这个功能还不管用 先不用动
+  Flag: HIDDEN_TOOLTIP

@@ -1,0 +1,14 @@
+default:
+  options:
+    headSync: true
+  actions:
+    - 'trail<->true'
+    - 'leftArm<->z=-75,v=0.2'
+    - 'rightArm<->x=-60,v=0.2;y=-60,v=0.1'
+    - 'rightForeArm<->x=-60,v=0.2'
+    - 'delay<->200'
+    - 'leftForeArm<->z=-50,v=0.2'
+    - 'move<->x=1'
+    - 'delay<->2000'
+    - 'trail<->false'
+    - 'status<->finish'

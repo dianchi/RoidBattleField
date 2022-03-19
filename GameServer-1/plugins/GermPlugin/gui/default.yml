@@ -1,0 +1,169 @@
+#介绍后面带有(可删除)标记的代表参数可以删掉不写，能让你的yml更简洁、文件更小
+
+#options标识符表示设置这个GUI的参数(该标识符可全部删除)(如果该界面被作为子界面打开，options是继承与父界面的)
+options:
+  #设置起始坐标轴，你可以根据你的习惯来设置这个界面的原点。(如果删除此行，默认为MC界面的最上边)
+  startX: "w*0.01"
+  #设置起始坐标轴，你可以根据你的习惯来设置这个界面的原点。(如果删除此行，默认为MC界面的最左边)
+  startY: "10"
+  #打开一次后就在客户端删除该界面的缓存(就是打开并关闭后，需要重载才能再打开)可删除 默认false
+  consume: false
+  #是否开启坐标指南，开启后将会绘制指针的坐标位置(可删除，默认为false)
+  guide: false
+  #打开界面时的声音，删除此行默认无声
+  openSound: "minecraft:block.anvil.use"
+  #打开GUI时执行一些关于GUI的特殊操作 以下称为dos(可删除)
+  #dos都是以 标记<->参数 的形式书写 不同的标记拥有不同的功能
+  openDos:
+    - "openchild<->default3" #打开一个子窗口(default3也是一个gui目录下的yml文件)
+  #这个界面中支持动画的部件共有的动画，目前动画还不是所有部件兼容，但是后面会一个一个兼容直到全部兼容(可删除)
+  #目前兼容动画的部件有 GIF 图片 按钮 字符串
+  animations:
+    - "default_move"
+#索引名 没有特殊意义 但是禁止界面内有一样的名称
+texture:
+  #type作为标记这个部件是什么类型，目前拥有七个
+  #0为图片 1为颜色块 2为GIF 3为按钮 4为字符串 5为物品槽 6为实体 7位输入槽
+  #能想到我就会添加，如果有新的需求请及时通知我
+  type: 0
+  #图片的材质路径地址可以使用 local<->地址 或者直接输入 地址
+  #同时支持网络连接地址 前面必须加上标记 url<-> 例如:url<->https://s1.ax1x.com/2020/06/19/NnqzVK.png
+  path: 'local<->textures/misc/logo.png'
+  #图片的显示起始坐标(图片的左上角为起始点)
+  locationX: "w-90"
+  locationY: "h-90"
+  #宽度width和高度height也同样支持运算符和 w h 变量 w代表整个MC的宽度
+  width: "50"
+  height: "50"
+  #这个图片的动画(可删除)
+  animations:
+    - "default_scale"
+blackColorBlock:
+  type: 1
+  locationX: "w*0.1"
+  locationY: "h*0.1"
+  width: "w*0.1"
+  height: "h*0.8"
+  #颜色块的颜色为RGBA，请在前面加上0x，如果不了解什么是RGBA可以搜索 什么是RGBA
+  color: 0x88888800
+  #颜色块的末尾颜色，可以形成渐变色（可删除）删除后为纯色
+  endColor: 0x88888800
+gif:
+  type: 2
+  #同样支持url<->
+  path: 'local<->gif/ghast.gif'
+  #这个gif播放几遍后停止，-1是无限循环
+  cycle: -1
+  locationX: "w*0.26"
+  locationY: "h*0.11"
+  width: "w*0.53"
+  height: "h*0.58"
+  #这个图片的动画(可删除)
+  animations:
+    - "default_move"
+button:
+  type: 3
+  #按钮默认的图片
+  defaultPath: 'local<->textures/misc/warn.png'
+  #鼠标悬浮到按钮时的图片(可删除)
+  hoverPath: 'local<->textures/misc/logo.png'
+  #悬浮到按钮播放声音(可删除)
+  hoverSound: 'hoverbutton'
+  #点击按钮播放声音(可删除)
+  clickSound: 'clickbutton'
+  locationX: "w*0.3"
+  locationY: "h*0.1"
+  width: "w*0.1"
+  height: "h*0.2"
+  #默认的按钮动画(可删除)
+  animations:
+    - "default_rotate"
+  #悬浮到按钮时的动画(可删除)
+  hoverAnimations:
+    - "default_rotate"
+  #默认字符串将显示在按钮中间，支持PAPI变量(可删除)
+  texts:
+    - "&e亲爱的: %player_name%"
+    - "&e这是按钮"
+  #悬浮字符串，介绍同上(可删除)
+  hoverTexts:
+    - "&c亲爱的: %player_name%"
+    - "&c这是按钮"
+  #点击的时候执行dos，这里的dos在任何dos中都适用(可删除)
+  clickDos:
+    - "open<->default2" #打开另一个界面
+    - "open<->null" #关闭界面
+    - "placeholder<->%player_has_permission_germ_gui%@true" #判断变量等于true后才会往下面运行，配合PlaceholderAPI的js编写，能够达到几乎所有的限制条件
+    - "delay<->3000" #3000毫秒后才会往下面运行
+    - "openchild<->default3" #打开一个子窗口，子窗口也是一个gui目录下的yml文件
+    #打开子窗口 传入变量 16、萌芽、%germquest_1_id%的值
+    #此时打开的子窗口中的字符串如果有 <quest1> 就会替换为16 如果有 <quest2> 就会替换为 萌芽 如果有 <quest3> 就会替换为%germquest_1_id%的值
+    - "openchild<->quest@16@萌芽@%germquest_1_id%"
+    - "openchild<->null" #关闭最后一个子窗口
+    - "closechild<->default3" #关闭子界面default3
+    - "closechild<->all" #关闭所有子界面
+    - "invalid<->all" #禁止所有可互动操作（例如按钮的点击 悬浮改图片 播放声音）
+    - "invalid<->button" #禁止button(这里填的是yml的索引名)的可互动操作（例如点击 悬浮图片 播放声音）
+    - "valid<->all" #开启所有的可互动操作（例如点击 悬浮图片 播放声音）
+    - "valid<->button" #开启button的可互动操作（例如点击 悬浮图片 播放声音）
+    - "playsound<->opengui" #播放声音
+    - "cmd<->say %player_name%打开了" #点击的人以玩家的身份执行命令(支持PAPI变量)
+    - "opcmd<->gamemode %player_name% 1" #点击的人以OP的身份执行命令(支持PAPI变量)
+    - "servercmd<->say %player_name%" #点击的人让后台执行一条命令(支持PAPI变量)
+  rightDos: #鼠标右键时候执行dos(可删除)
+    - "openchild<->rightMenu"
+  #鼠标悬浮时候执行dos(可删除)
+  hoverDos:
+    - "open<->null" #关闭界面
+  #鼠标悬浮离开后执行dos(可删除)
+  levelDos:
+    - "open<->null" #关闭界面
+label:
+  type: 4
+  #文字的对齐方式 左对齐 left  右对齐 right 居中 center  可删除 默认为left
+  align: "center"
+  #缩放 注意引号 可用 w h 计算 1为原大小
+  scale: '1'
+  #字符串
+  texts:
+    - "亲爱的: %player_name%"
+    - "您的世界: %world_name%"
+    - "<click>" #<click>独占一行，代表点一下才会继续显示下面的内容
+  locationX: "w*0.5"
+  locationY: "h*0.5"
+  #这个图片的动画(可删除)
+  animations:
+    - "default_move"
+slot:
+  type: 5
+  #槽位的宽和高(可以使用 w h) 例如：size: 'w*0.1' 或 size: 'h*0.1' 或 size: ' w / h * 0.1'
+  size: "36"
+  #是否允许与该槽位交互（可删除，默认为false）
+  interact: true
+  #任何界面中identity都不能用一样的 防止槽位的物品混乱 （如果您是开发者 推荐使用 处理该槽位的插件全名小写_用来逻辑判断的字符）
+  identity: "germplugin_default"
+  #当槽位内有物品时显示的图片
+  fillPath: 'local<->textures/gui/slot.png'
+  #当槽位为空的时候显示的图片
+  emptyPath: 'local<->textures/gui/slot.png'
+  hoverSound: 'hoverbutton'
+  clickSound: 'clickbutton'
+  locationX: "w*0.7"
+  locationY: "h*0.5"
+entity:
+  type: 6
+  #cursor 为玩家面前的生物 ; self 为自己 ; 模型 name
+  model: 'self'
+  #提示的大小
+  size: "30"
+  locationX: "w*0.1"
+  locationY: "h*0.73"
+input:
+  type: 7
+  width: "w*0.4"
+  height: "h*0.1"
+  locationX: "w*0.2"
+  locationY: "h*0.7"
+  #这个dos中的<input>将会被替换为输入槽的内容 同时兼容其他任何dos
+  enterDos:
+    - "opcmd<->say &a亲爱的 &e%player_name% &a想说 <input>"

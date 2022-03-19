@@ -1,0 +1,301 @@
+match: "gui1"
+through: false
+priority: 1
+interactHud: false
+currentItemSize: 16
+allowEscClose: true
+hideHud: []
+import: []
+Functions:
+  open: |-
+    方法.异步执行方法('每秒更新变量');
+    方法.异步执行方法('屏幕自适应');
+  keyPress: |-
+    (方法.取当前按下键=='E' || 方法.取当前按下键=='ESCAPE')?{方法.关闭界面}:0
+  屏幕自适应: |-
+    界面变量.x比=方法.取屏幕宽度()/960;
+    界面变量.y比=方法.取屏幕高度()/508.5;
+    界面变量.xy比 = 界面变量.x比/界面变量.y比;
+    方法.延时(500);
+    方法.异步执行方法('屏幕自适应');
+  每秒更新变量: |-
+    方法.更新变量值('vault_eco_balance');
+    方法.更新变量值('player_health','player_max_health','player_food_level');
+    方法.更新变量值("ap_life","ap_lifes","player_food_level","sl_exp","sx_health","sx_maxHealth","sl_maxExp","sl_level");
+    方法.更新变量值('playerpoints_points');
+    方法.更新变量值('ap_damage_min','ap_damage_max','ap_defense_max','ap_defense_min','ap_critchance','ap_critrate','ap_dodge'
+    ,'ap_reflection','ap_hit','ap_expaddition','ap_vampirechance','ap_sunderarmor','ap_shootspeed','ap_moving');
+    方法.延时(300);
+    方法.异步执行方法('每秒更新变量');
+图片8_texture-副本:
+  type: "图片"
+  x: "w*0.140"
+  y: "h*0.108"
+  width: "w*0.25*3"
+  height: "h*0.247*3"
+  alpha: "方法.取界面存活时间/700"
+  texture: "靓仔寒UI/属性/角色信息1.png"
+图片3_texture:
+  type: "图片"
+  x: "w*0.830"
+  y: "h*0.263"
+  width: "w*0.027*3"
+  height: "h*0.049*3"
+  texture: "靓仔寒UI/属性/角色.png"
+图片2_texture:
+  type: "图片"
+  x: "w*0.47"
+  y: "h*0.643"
+  width: "w*0.04*2"
+  height: "h*0.071*2"
+  texture: "靓仔寒UI/属性/时装槽位.png"
+  textureHovered: "靓仔寒UI/属性/时装槽位hover.png"
+槽位1_slot:
+  type: "槽位"
+  x: "w*0.212"
+  y: "h*0.264"
+  width: "w*0.042"
+  height: "h*0.078"
+  extends: ""
+  identifier: "container_5"
+槽位2_slot:
+  type: "槽位"
+  x: "w*0.212"
+  y: "h*0.377"
+  width: "w*0.044"
+  height: "h*0.079"
+  extends: ""
+  identifier: "container_6"
+槽位3_slot:
+  type: "槽位"
+  x: "w*0.212"
+  y: "h*0.495"
+  width: "w*0.042"
+  height: "h*0.075"
+  extends: ""
+  identifier: "container_7"
+槽位4_slot:
+  type: "槽位"
+  x: "w*0.211"
+  y: "h*0.604"
+  width: "w*0.044"
+  height: "h*0.077"
+  extends: ""
+  identifier: "container_8"
+槽位5_slot:
+  type: "槽位"
+  x: "w*0.523"
+  y: "h*0.265"
+  width: "w*0.043"
+  height: "h*0.079"
+  extends: ""
+  identifier: "container_45"
+槽位6_slot:
+  type: "槽位"
+  x: "w*0.522"
+  y: "h*0.376"
+  width: "w*0.044"
+  height: "h*0.079"
+  extends: ""
+  identifier: "项链槽位"
+槽位7_slot:
+  type: "槽位"
+  x: "w*0.524"
+  y: "h*0.494"
+  width: "w*0.042"
+  height: "h*0.077"
+  extends: ""
+  identifier: "戒指槽位"
+图片6_texture:
+  type: "图片"
+  x: "w*0.6535"
+  y: "h*0.296"
+  width: "界面变量.x比*方法.取变量('sl_exp')/方法.取变量('sl_maxExp')*115.5"
+  height: "h*0.021"
+  texture: "靓仔寒UI/属性/经验.png"
+图片7_texture:
+  type: "图片"
+  x: "w*0.635"
+  y: "h*0.331"
+  width: "界面变量.x比*方法.玩家血量*3.400"
+  height: "h*0.021"
+  texture: "靓仔寒UI/属性/血条.png"
+图片8_texture:
+  type: "图片"
+  x: "w*0.635"
+  y: "h*0.365"
+  width: "界面变量.x比*方法.玩家饱食度*6.8"
+  height: "h*0.021"
+  texture: "靓仔寒UI/属性/蓝条.png"
+实体1_entity:
+  type: "实体"
+  x: "w*0.395"
+  y: "h*0.647"
+  scale: "2"
+  entity: "owner"
+  followMouse: false
+文本2_label:
+  type: "文本"
+  x: "w*0.623"
+  y: "h*0.298"
+  width: "w*0.059"
+  height: "h*0.026"
+  texts:
+  - "方法.取变量('sl_level')"
+  color: "112,50,69,255"
+文本3_label:
+  type: "文本"
+  x: "w*0.640"
+  y: "h*0.493"
+  width: "w*0.059"
+  height: "h*0.026"
+  texts:
+  - "方法.合并文本(方法.取变量('ap_damage_min'),'-',方法.取变量('ap_damage_max'))"
+  color: "220,220,220,255"
+  shadow: "true"
+文本4_label:
+  type: "文本"
+  x: "w*0.732"
+  y: "h*0.493"
+  width: "w*0.059"
+  height: "h*0.026"
+  texts:
+  - "方法.合并文本(方法.取变量('ap_defense_min'),'-',方法.取变量('ap_defense_max'))"
+  color: "220,220,220,255"
+  shadow: "true"
+文本20_label:
+  type: "文本"
+  x: "w*0.715"
+  y: "h*0.2975"
+  texts:
+  - "方法.合并文本(方法.取变量('sl_exp'),'/',方法.取变量('sl_maxExp'))"
+  shadow: "true"
+  center: true
+文本7_label:
+  type: "文本"
+  x: "w*0.710"
+  y: "h*0.332"
+  texts:
+  - "方法.合并文本(方法.取变量('ap_life'),'/',方法.取变量('ap_lifes'))"
+  shadow: "true"
+  center: true
+文本5_label:
+  type: "文本"
+  x: "w*0.640"
+  y: "h*0.533"
+  width: "w*0.059"
+  height: "h*0.026"
+  texts:
+  - "方法.合并文本(方法.取变量('ap_critchance'),'%')"
+  color: "220,220,220,255"
+  shadow: "true"
+文本6_label:
+  type: "文本"
+  x: "w*0.732"
+  y: "h*0.533"
+  width: "w*0.059"
+  height: "h*0.026"
+  texts:
+  - "方法.合并文本(方法.取变量('ap_critrate'),'%')"
+  color: "220,220,220,255"
+  shadow: "true"
+文本8_label:
+  type: "文本"
+  x: "w*0.640"
+  y: "h*0.573"
+  width: "w*0.059"
+  height: "h*0.026"
+  texts:
+  - "方法.合并文本(方法.取变量('ap_dodge'),'%')"
+  color: "220,220,220,255"
+  shadow: "true"
+文本9_label:
+  type: "文本"
+  x: "w*0.732"
+  y: "h*0.573"
+  width: "w*0.059"
+  height: "h*0.026"
+  texts:
+  - "方法.合并文本(方法.取变量('ap_reflection'),'%')"
+  color: "220,220,220,255"
+  shadow: "true"
+文本10_label:
+  type: "文本"
+  x: "w*0.640"
+  y: "h*0.614"
+  width: "w*0.059"
+  height: "h*0.026"
+  texts:
+  - "方法.合并文本(方法.取变量('ap_hit'),'%')"
+  color: "220,220,220,255"
+  shadow: "true"
+文本11_label:
+  type: "文本"
+  x: "w*0.732"
+  y: "h*0.614"
+  width: "w*0.059"
+  height: "h*0.026"
+  texts:
+  - "方法.合并文本(方法.取变量('ap_expaddition'),'%')"
+  color: "220,220,220,255"
+  shadow: "true"
+文本12_label:
+  type: "文本"
+  x: "w*0.640"
+  y: "h*0.654"
+  width: "w*0.059"
+  height: "h*0.026"
+  texts:
+  - "方法.合并文本(方法.取变量('ap_vampirechance'),'%')"
+  color: "220,220,220,255"
+  shadow: "true"
+文本13_label:
+  type: "文本"
+  x: "w*0.732"
+  y: "h*0.654"
+  width: "w*0.059"
+  height: "h*0.026"
+  texts:
+  - "方法.合并文本(方法.取变量('ap_sunderarmor'),'%')"
+  color: "220,220,220,255"
+  shadow: "true"
+文本14_label:
+  type: "文本"
+  x: "w*0.640"
+  y: "h*0.695"
+  width: "w*0.059"
+  height: "h*0.026"
+  texts:
+  - "方法.合并文本(方法.取变量('ap_shootspeed'))"
+  color: "220,220,220,255"
+  shadow: "true"
+文本15_label:
+  type: "文本"
+  x: "w*0.732"
+  y: "h*0.695"
+  width: "w*0.059"
+  height: "h*0.026"
+  texts:
+  - "方法.合并文本(方法.取变量('ap_moving'))"
+  color: "220,220,220,255"
+  shadow: "true"
+图片5_texture:
+  type: "图片"
+  x: "w*0.852"
+  y: "h*0.603"
+  width: "w*0.013*3"
+  height: "h*0.046*3"
+  texture: "靓仔寒UI/属性/技能1.png"
+  textureHovered: "靓仔寒UI/属性/技能hover.png"
+  actions:
+    click: "方法.播放声音;"
+图片4_texture:
+  type: "图片"
+  x: "w*0.853"
+  y: "h*0.432"
+  width: "w*0.013*3"
+  height: "h*0.046*3"
+  actions:
+    click: "方法.播放声音;方法.执行按键指令('背包')"
+  texture: "靓仔寒UI/属性/背包1.png"
+  textureHovered: "靓仔寒UI/属性/背包hover.png"

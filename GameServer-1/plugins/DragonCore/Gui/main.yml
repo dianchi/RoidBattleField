@@ -1,0 +1,39 @@
+match: "main"
+through: false
+priority: 1
+interactHud: false
+currentItemSize: 16
+allowEscClose: true
+hideHud:
+- "HEALTH"
+- "FOOD"
+- "ARMOR"
+- "EXPERIENCE"
+- "HOTBAR"
+import: []
+Functions:
+  open: |-
+    方法.异步执行方法('每秒更新变量');
+    方法.异步执行方法('屏幕自适应');
+  屏幕自适应: |-
+    界面变量.x比=方法.取屏幕宽度()/960;
+    界面变量.y比=方法.取屏幕高度()/508.5;
+    界面变量.xy比 = 界面变量.x比/界面变量.y比;
+    方法.延时(500);
+    方法.异步执行方法('屏幕自适应');
+  每秒更新变量: |-
+    方法.更新变量值('vault_eco_balance');
+    方法.更新变量值('player_health','player_max_health','player_food_level');
+    方法.更新变量值("ap_life","ap_lifes","player_food_level","sl_exp","sx_health","sx_maxHealth","sl_maxExp","sl_level");
+    方法.更新变量值('playerpoints_points');
+    方法.更新变量值('ap_damage_min','ap_damage_max','ap_defense_max','ap_defense_min','ap_critchance','ap_critrate','ap_dodge'
+    ,'ap_reflection','ap_hit','ap_expaddition','ap_vampirechance','ap_sunderarmor','ap_shootspeed','ap_moving');
+    方法.延时(300);
+    方法.异步执行方法('每秒更新变量');
+底层_texture:
+  type: "图片"
+  x: 0
+  y: 0
+  width: w
+  height: h
+  texture: "RoidMC/MAIN/主界面.png"

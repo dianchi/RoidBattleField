@@ -1,0 +1,35 @@
+CommonTextureEffect:
+  type: 0
+  3D: false
+  scale: 5
+  path: 'collapse/0.png'
+  animations:
+    - 'default_rotate'
+TextureFramesEffect:
+  type: 1
+  3D: false
+  hz: 122
+  scale: 5
+  cycle: -1
+  frames:
+    - 'effect/collapse/0.png'
+    - 'effect/collapse/1.png'
+    - 'effect/collapse/2.png'
+    - 'effect/collapse/3.png'
+    - 'effect/collapse/4.png'
+    - 'effect/collapse/5.png'
+  animations:
+    - 'default_rotate'
+GIFEffect:
+  type: 2
+  3D: false
+  scale: 5
+  cycle: -1
+  path: 'gif/ghast.gif'
+  animations:
+    - 'default_rotate'
+NavigateEffect:
+  type: 3
+  scale: 5
+  itemType: '276'
+  itemName: '火剑'
