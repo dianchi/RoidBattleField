@@ -1780,8 +1780,8 @@ Enchanting:
       oxygen: 3
       water_worker: 1
       mending: 1
-      vanishing_curse: 1
       thorns: 3
+      vanishing_curse: 1
       depth_strider: 3
       frost_walker: 2
       binding_curse: 1

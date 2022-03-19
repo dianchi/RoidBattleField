@@ -537,10 +537,10 @@ info:
     - AquaAffinity
     mending:
     - Mending
-    vanishing_curse:
-    - VanishingCurse
     thorns:
     - Thorns
+    vanishing_curse:
+    - VanishingCurse
     depth_strider:
     - DepthStrider
     frost_walker:
